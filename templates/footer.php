@@ -2,7 +2,6 @@
 include_once str_replace('templates', '', __DIR__) . '/lib/offices_countries.php'; 
 ?>
 
-
 <?php 
 $offices = '';
 foreach(getOfficesCountries() as $office) { 
