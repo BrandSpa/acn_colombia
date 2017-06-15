@@ -165,9 +165,8 @@ add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
 
 function convertloop_contact() {
   $data = $_POST['data'];
-  $lang = getCountryLang($data['country']);
-  $data['add_tags'][] = $lang == 'es' ? 'SPANISH' : 'ENGLISH';
-
+  $data['add_tags'][] = 'SPANISH';
+  $data['country'] = 'Colombia';
   $appId = get_option('convertloop_app_default');
   $apiKey = get_option('convertloop_api_default');
 
