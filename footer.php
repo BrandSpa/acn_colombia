@@ -1,4 +1,5 @@
 	<?php require('templates/footer.php') ?>
+  
   <a 
     href="#"
     id="return-to-top" 
@@ -54,7 +55,6 @@
 <script src='<?php echo get_template_directory_uri() ?>/public/js/app.c0e984772471689792e6.js'></script>
 
 <!--/app theme-->
-
 
  <!-- Google Analytics -->
   <script src='https://www.google-analytics.com/analytics.js'></script>

@@ -35,13 +35,15 @@ echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the wor
 
 			</div>
 		</div>
+
 		<div class="bs-footer__right--bottom">
 			<div class="col-3-l">
 				<h5><?php echo gett('Contact') ?></h5>
-				<h6>ACN Slovensko – Pomoc trpiacej Cirkvi</h6>
-				<h6>Hviezdoslavovo nám. 170/ 13</h6>
-				<h6>811 01 Bratislava</h6>
-				<h6><a href="mailto:info@acn-slovensko.org">info@acn-slovensko.org</a></h6>
+				<h6>ACN Colombia</h6>
+				<h6>Calle 98 # 71A - 42 , Pontevedra</h6>
+				<h6>Bogotá, D.C</h6>
+				<h6><a href="mailto:info@acncolombia.org">info@acncolombia.org</a></h6>
+				<h6>Tel +57.1.4848890</h6>
 			</div>
 
 			<div class="col-3-l">
