@@ -1,5 +1,11 @@
 import React from "react";
 
+const cleanEmpty = (arrArg) => {
+  return arrArg.filter(item => {
+    return item.length > 0;
+  })
+}
+
 class Post extends React.Component {
   static defaultProps = {
     post: {
