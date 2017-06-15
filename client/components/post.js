@@ -1,10 +1,7 @@
 import React from "react";
 
-const cleanEmpty = (arrArg) => {
-  return arrArg.filter(item => {
-    return item.length > 0;
-  })
-}
+const cleanEmpty = arrArg => 
+  arrArg.filter(item => item.length > 0);
 
 class Post extends React.Component {
   static defaultProps = {
@@ -16,7 +13,7 @@ class Post extends React.Component {
   handleImageLoaded = () => {
     this.props.onImageLoaded();
   };
-
+ 
   render() {
     const { post, type, read_more } = this.props;
     const imgUrl = cleanEmpty(post.post_image);
