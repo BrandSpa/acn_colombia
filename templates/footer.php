@@ -60,6 +60,6 @@ echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the wor
 	</div>
 	
 	<div class="bs-footer__bottom--bottom">
-			<img src="/wp-content/uploads/sites/28/2017/06/acn-slovensko-pontificial.png" class="vc_single_image-img attachment-full" alt="llaves">
+			<img src="/wp-content/uploads/2016/11/llaves-4.png" class="vc_single_image-img attachment-full" alt="llaves">
 	</div>
 </div>
