@@ -45,9 +45,8 @@ function get_user_location() {
 
 function getCountry() {
   if(function_exists('get_user_location')) {
-    return get_user_location() ? get_user_location()->names['en'] : '';
+    return is_object(get_user_location()) ? get_user_location()->names['en'] : '';
   }
-
   return '';
 }
 
