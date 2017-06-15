@@ -57,6 +57,7 @@ function bs_posts_list_sc($atts, $content = null) {
 						</div>
 				</a>
 				<?php else: ?>
+				<?php echo get_post_meta($post->ID, 'image_square_key')[1] ?>
 				<?php endif; ?>
 
 				<div class="bs-posts-list__main__content" style="background-color: #3C515F;">
