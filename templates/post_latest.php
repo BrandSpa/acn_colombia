@@ -7,8 +7,12 @@
 <?php foreach($recent_posts as $recent): ?>
 	<div class="bs-post__recent">
 		<?php if(get_post_meta($recent->ID, 'image_square_key', true)): ?>
-		<a href="<?php echo get_permalink($recent->ID) ?>">
-			<img src="<?php echo get_post_meta($recent->ID, 'image_square_key', true) ?>" style="width: 100%" />
+			<a href="<?php echo get_permalink($recent->ID) ?>">
+				<img src="<?php echo get_post_meta($recent->ID, 'image_square_key', true) ?>" style="width: 100%" />
+			</a>
+		<?php elseif(isset(get_post_meta($post->ID, 'image_square_key')[1]) && !empty(get_post_meta($post->ID, 'image_square_key')[1])): ?>
+			<a href="<?php echo get_permalink($recent->ID) ?>">
+				<img src="<?php echo get_post_meta($recent->ID, 'image_square_key')[1] ?>" style="width: 100%" />
 			</a>
 		<?php endif; ?>
 
