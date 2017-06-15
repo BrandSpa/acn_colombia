@@ -18,7 +18,6 @@ function bs_posts_list_sc($atts, $content = null) {
 	$page = isset($_GET['posts']) ?  $_GET['posts'] : 0;
 	$offset = isset($_GET['posts']) ? intval($_GET['posts']) * 10 : 0;
 
-
   $at = shortcode_atts( $attributes , $atts );
 	$args = array( 'posts_per_page' => 10, 'offset' => $offset );
 
@@ -28,8 +27,8 @@ function bs_posts_list_sc($atts, $content = null) {
 		'posts_per_page' => 10,
 		'post_status' => 'publish'
   ));
-	
-	$recent_posts = $query->get_posts();
+
+	$query->get_posts();
 
   ob_start();
 ?>
@@ -47,11 +46,17 @@ function bs_posts_list_sc($atts, $content = null) {
 				<a href="<?php echo get_permalink($post->ID) ?>">
 					<div 
 						class="bs-posts-list__main__img" 
-						style="background-image:url(<?php echo get_post_meta($post->ID, 'image_square_key', true, true) ?>);background-color: #E5A612;">					
+						style="background-image:url(<?php echo get_post_meta($post->ID, 'image_square_key', true, true) ?>); background-color: #E5A612;">
 					</div>
 				</a>
+				<?php elseif(isset(get_post_meta($post->ID, 'image_square_key')[1]) && !empty(get_post_meta($post->ID, 'image_square_key')[1])): ?>
+					<a href="<?php echo get_permalink($post->ID) ?>">
+						<div 
+							class="bs-posts-list__main__img" 
+							style="background-image:url(<?php echo get_post_meta($post->ID, 'image_square_key')[1] ?>); background-color: #E5A612;">
+						</div>
+				</a>
 				<?php else: ?>
-				<?php  ?>
 				<?php endif; ?>
 
 				<div class="bs-posts-list__main__content" style="background-color: #3C515F;">
