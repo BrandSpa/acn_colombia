@@ -1,3 +1,18 @@
+<?php 
+include_once str_replace('templates', '', __DIR__) . '/lib/offices_countries.php'; 
+?>
+
+<?php 
+$offices = '';
+foreach(getOfficesCountries() as $office) { 
+	if($office !== 'default') {
+		$offices .= '<li><a href="'. get_option('url_' . space_to_lodash($office)) .'">'.$office.'</a></li>';
+	}
+};
+
+echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the world').'"]<ul class="offices-list">'. $offices .'</ul>[/bs_accordion]') 
+?>
+
 <div class="bs-footer">
 	<div class="bs-footer__left col-3-l">
 		<img width="86" src="//acninternational.org/wp-content/uploads/2017/02/pope.png" class="vc_single_image-img attachment-medium" alt="pope">
