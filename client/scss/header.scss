@@ -1,14 +1,13 @@
 .header-banner {
 	background: #F1364E;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-align: center;
 	color: #fff;
-	padding: 20px 0;
+	padding: 10px 0;
 	float: none;
 	margin: 0 auto;
 	margin-bottom: -40px !important;
 	z-index: 1010;
-	text-transform: uppercase;
 	
 	@media #{$s} {
 		font-size: 1.3em;
