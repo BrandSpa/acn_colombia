@@ -15,7 +15,7 @@ function bs_posts_list_sc($atts, $content = null) {
 		 $pages = ceil(pll_count_posts(pll_current_language()) / 10);
 	}
 
-	$page = isset($_GET['posts']) ?  $_GET['posts'] : 0;
+	$page = isset($_GET['posts']) ?  $_GET['posts'] : 1;
 	$offset = isset($_GET['posts']) ? intval($_GET['posts']) * 10 : 0;
 
   $at = shortcode_atts( $attributes , $atts );
