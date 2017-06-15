@@ -28,7 +28,7 @@ function bs_posts_list_sc($atts, $content = null) {
 		'post_status' => 'publish'
   ));
 
-	$query->get_posts();
+	$recent_posts = $query->get_posts();
 
   ob_start();
 ?>
