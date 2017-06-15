@@ -2,6 +2,8 @@ import React from "react";
 import request from "axios";
 import qs from "qs";
 const endpoint = "/wp-admin/admin-ajax.php";
+const cleanEmpty = arrArg => 
+  arrArg.filter(item => item.length > 0);
 
 class PostsAbout extends React.Component {
   state = {
@@ -39,15 +41,15 @@ class PostsAbout extends React.Component {
       <div
         style={
           this.state.loading
-            ? { transition: "300 ms", opacity: 0 }
-            : { transition: "300 ms", opacity: 1 }
+            ? { transition: "300 ms", height: 0 }
+            : { transition: "300 ms", height: 'auto' }
         }
       >
         {posts.map((post, i) => {
           return (
             <div key={i} className="col-12 col-3-l">
               <a href={post.post_permalink} style={{ background: "#fff" }}>
-                <img src={post.post_image} alt="" style={{ width: "100%" }} />
+                <img src={cleanEmpty(post.post_image)} alt="" style={{ width: "100%" }} />
               </a>
               <div
                 className="post-about__title"
