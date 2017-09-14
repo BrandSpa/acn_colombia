@@ -1,7 +1,4 @@
 "use strict";
-//get sass file and compiled to css
-import "./scss/index.scss";
-
 import "babel-polyfill";
 import WebFont from "webfontloader";
 import multipleRender from "react-multiple-render";
@@ -76,7 +73,7 @@ stickyMenu();
 toggleMenu();
 let cookies = {};
 
-document.cookie.split(";").forEach(function(l) { 
+document.cookie.split(";").forEach(function(l) {
   cookies[l.split("=")[0].trim()] = l.split("=")[1];
 });
 
@@ -86,4 +83,3 @@ if(document.querySelector(".bs-donate")) {
     console.log("click", _dp);
   });
 }
-

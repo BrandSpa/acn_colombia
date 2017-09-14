@@ -15,11 +15,11 @@ const backgroundColors = {
 };
 
 class Projects extends React.Component {
-  
-  state = { section: 1, bg: "#B91325", donateColor: "#B91325" };
+
+  state = { section: 9, bg: "#B91325", donateColor: "#B91325" };
 
   componentDidMount() {
-    var num = 1;
+    var num = 9;
 
     this.props.contents.map(function(content, ind) {
       if (content.hash_url == window.location.hash.replace("#", "")) {

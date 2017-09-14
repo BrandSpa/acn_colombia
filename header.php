@@ -1,9 +1,9 @@
 <?php
- header('Access-Control-Allow-Origin: *'); 
+ header('Access-Control-Allow-Origin: *');
  $homeUrl =  function_exists(' pll_home_url') ?  pll_home_url() : '/';
  $permalink = get_permalink();
 ?>
- 
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -22,18 +22,18 @@
 
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="32x32" />
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="192x192" />
-  
+
   <link rel="apple-touch-icon-precomposed" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" />
 	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
 
   	<!--wordpress files-->
 	  <?php wp_head(); ?>
 		<!-- /wordpress files-->
-    
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/public/js/app.1bebd9c1f40fe659d0496011ef5654ef.css">
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/public/js/app.css?v=<?php echo get_template_directory() . '/public/js/app.css' ?>">
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  
+
 	<script>
       function onLoad(cb) {
         if (window.addEventListener)
@@ -45,7 +45,7 @@
         }
       }
   </script>
-  
+
   <!-- ConvertLoop -->
   <script>
     !function(t,e,n,s) { t.DPEventsFunction=s,t[s]=t[s] || function() { (t[s].q=t[s].q||[]).push(arguments) }; var c=e.createElement("script"),o=e.getElementsByTagName("script")[0]; c.async=1,c.src=n,o.parentNode.insertBefore(c,o); }(window, document, "https://www.convertloop.co/v1/loop.min.js", "_dp");

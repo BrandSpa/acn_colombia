@@ -9,6 +9,7 @@
   "scripts": {
     "test:watch": "jest -- --watch",
     "test": "jest",
+    "build": "webpack --p",
     "build:admin": "webpack  --config=webpack.admin.js --p",
     "lint": "eslint client/components"
   },
@@ -48,6 +49,9 @@
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
     "husky": "^0.13.3",
     "jest": "^19.0.2",
     "moxios": "^0.3.0",
